@@ -1,5 +1,4 @@
 
-//img.alt="";
 async function getData() {
 	// 1. Получить данные с сервера
 	let url = 'https://bngprm.com/api/v2/models-online?c=614262&client_ip=192.168.1.1&limit=8';
