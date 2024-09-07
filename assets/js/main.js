@@ -13,6 +13,13 @@ const result = new Promise((resolve, reject) => {
 	// or
 	// reject(new Error("Error!"));
 });
+function onMove() {
+	let signal  = document.createElement('div');
+	signal.className = "signal";
+	let body = document.querySelector('body');
+	signal.textContent = 'очко лизал';
+	body.appendChild(signal);
+}
 result.then(
 	(value) => {
 		value.forEach((item, index, array) => {
@@ -27,8 +34,8 @@ result.then(
 			let box = document.querySelector('.box');
 			img.className = "avatar"
 			img.src = item.live_images.thumbnail_image_medium;
-			
 			box.appendChild(element);
+			element.addEventListener('mouseover', onMove);
 		}); // Success!
 	},
 	(reason) => {

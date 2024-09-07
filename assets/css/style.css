@@ -9,6 +9,11 @@ html,
 body {
   height: 100%; }
 
+.signal {
+  position: absolute;
+  top: 400px;
+  right: 50px; }
+
 .wrap {
   min-width: 100%;
   display: -webkit-box;

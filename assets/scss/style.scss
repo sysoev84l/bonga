@@ -10,7 +10,11 @@ html,
 body {
     height: 100%;
 }
-
+.signal {
+    position: absolute;
+    top: 400px;
+    right: 50px;
+}
 .wrap {
     min-width: 100%;
     display: -webkit-box;
@@ -208,51 +212,55 @@ h2 {
             }
         }
     }
+
     .footer {
         .footer-wrap {
             -webkit-flex-wrap: wrap;
-                -ms-flex-wrap: wrap;
-                    flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
             .git-hub {
                 -webkit-box-ordinal-group: 3;
                 -webkit-order: 2;
-                   -moz-box-ordinal-group: 3;
-                    -ms-flex-order: 2;
-                        order: 2;
+                -moz-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                order: 2;
                 -webkit-box-flex: 0;
                 -webkit-flex: 0 1 50%;
-                   -moz-box-flex: 0;
-                    -ms-flex: 0 1 50%;
-                        flex: 0 1 50%;
+                -moz-box-flex: 0;
+                -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
                 text-align: left;
             }
+
             .copyright {
                 -webkit-box-ordinal-group: 2;
                 -webkit-order: 1;
-                   -moz-box-ordinal-group: 2;
-                    -ms-flex-order: 1;
-                        order: 1;
+                -moz-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                order: 1;
                 -webkit-box-flex: 0;
                 -webkit-flex: 0 1 100%;
-                   -moz-box-flex: 0;
-                    -ms-flex: 0 1 100%;
-                        flex: 0 1 100%;
+                -moz-box-flex: 0;
+                -ms-flex: 0 1 100%;
+                flex: 0 1 100%;
                 margin: 0;
                 font-size: 14px;
                 text-align: center;
                 margin-bottom: 10px;
             }
+
             .host-name-wrap {
                 -webkit-box-ordinal-group: 4;
                 -webkit-order: 3;
-                   -moz-box-ordinal-group: 4;
-                    -ms-flex-order: 3;
-                        order: 3;
+                -moz-box-ordinal-group: 4;
+                -ms-flex-order: 3;
+                order: 3;
                 -webkit-box-flex: 0;
                 -webkit-flex: 0 1 50%;
-                   -moz-box-flex: 0;
-                    -ms-flex: 0 1 50%;
-                        flex: 0 1 50%;
+                -moz-box-flex: 0;
+                -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
                 text-align: right;
             }
         }
