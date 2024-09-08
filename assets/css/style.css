@@ -15,7 +15,7 @@ body {
   right: 50px; }
 
 .wrap {
-  min-width: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
