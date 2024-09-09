@@ -117,12 +117,7 @@ h2 {
   .element .info {
     position: absolute;
     bottom: 0;
-    padding: 0 0 4px 6px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex; }
+    padding: 0 0 4px 6px; }
     .element .info .profile_link {
       color: #fff;
       text-decoration: none;
