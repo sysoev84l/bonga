@@ -1,7 +1,7 @@
 
 async function getData() {
 	// 1. Получить данные с сервера
-	let url = 'https://bngprm.com/api/v2/models-online?c=614262&client_ip=192.168.1.1&limit=8';
+	let url = 'https://bngprm.com/api/v2/models-online?c=614262&client_ip=192.168.1.1&limit=16';
 	const response = await fetch(url);
 	const data = await response.json();
 
@@ -30,7 +30,7 @@ result.then(
 			element.className = "element"	
 			let photoLink = document.createElement('a');
 			let img = document.createElement('img');
-			photoLink.href = item.chat_url;
+			photoLink.href = item.chat_url_on_home_page;
 			photoLink.target = "_blank";
 			photoLink.appendChild(img);
 			element.appendChild(photoLink);
