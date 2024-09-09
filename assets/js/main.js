@@ -19,7 +19,7 @@ function onMove() {
 	let signal  = document.createElement('div');
 	signal.className = "signal";
 	let body = document.querySelector('body');
-	signal.textContent = 'очко лизал';
+	signal.textContent = '';
 	body.appendChild(signal);
 }
 result.then(
@@ -27,17 +27,17 @@ result.then(
 		value.forEach((item, index, array) => {
 			let element = document.createElement('div');
 			element.className = "element"	
-			let a = document.createElement('a');
+			let photoLink = document.createElement('a');
 			let img = document.createElement('img');
-			a.href = item.chat_url;
-			a.target="_blank"
-			a.appendChild(img);
-			element.appendChild(a);
+			photoLink.href = item.chat_url;
+			photoLink.target="_blank"
+			photoLink.appendChild(img);
+			element.appendChild(photoLink);
 			let box = document.querySelector('.box');
 			img.className = "avatar"
 			img.src = item.live_images.thumbnail_image_medium;
 			box.appendChild(element);
-			element.addEventListener('mouseover', onMove);
+			//element.addEventListener('mouseover', onMove);
 		}); // Success!
 	},
 	(error) => {
@@ -49,8 +49,9 @@ result.then(
 		renderError.innerHTML="что пошло не так!!";
 		let content = document.querySelector('.content');
 		content.appendChild(renderError);
-		console.log(onError()); // Error!
-	},
+		console.error(onError());
+		console.error(error); 
+	}, // Error!
 );
 let hostName = document.location.origin;
 let hostNameLink = document.querySelector('.host-name');

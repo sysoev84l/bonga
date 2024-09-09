@@ -1,3 +1,4 @@
 .sass-cache/
-bs.sh
+browser-sync.sh
 git_push.sh
+sass.sh
