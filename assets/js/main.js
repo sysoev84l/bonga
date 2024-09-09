@@ -25,15 +25,24 @@ function onMove() {
 result.then(
 	(value) => {
 		value.forEach((item, index, array) => {
+			let box = document.querySelector('.box');
 			let element = document.createElement('div');
 			element.className = "element"	
 			let photoLink = document.createElement('a');
 			let img = document.createElement('img');
 			photoLink.href = item.chat_url;
-			photoLink.target="_blank"
+			photoLink.target = "_blank";
 			photoLink.appendChild(img);
 			element.appendChild(photoLink);
-			let box = document.querySelector('.box');
+			let info = document.createElement('div');
+			info.className = "info";
+			let profileLink = document.createElement('a');
+			profileLink.href = item.profile_page_url;
+			profileLink.target = "_blank";
+			profileLink.innerHTML = item.display_name;
+			profileLink.className = "profile_link"
+			info.appendChild(profileLink);
+			element.appendChild(info);
 			img.className = "avatar"
 			img.src = item.live_images.thumbnail_image_medium;
 			box.appendChild(element);

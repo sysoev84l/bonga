@@ -109,10 +109,24 @@ h2 {
   justify-content: center; }
 
 .element {
+  position: relative;
   margin: 5px; }
   .element .avatar {
     width: 320px;
     height: 240px; }
+  .element .info {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 4px 6px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .element .info .profile_link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px; }
 
 .footer {
   background: #164d7a;
