@@ -7,10 +7,13 @@ async function getData() {
 
 	return data.models;
 }
+function onError() {
+	return 'что пошло не так!!';
+}
 const result = new Promise((resolve, reject) => {
 	resolve(getData());
 	// or
-	// reject(new Error("Error!"));
+	reject(new Error('что пошло не так!'));
 });
 function onMove() {
 	let signal  = document.createElement('div');
@@ -37,8 +40,16 @@ result.then(
 			element.addEventListener('mouseover', onMove);
 		}); // Success!
 	},
-	(reason) => {
-		console.error(reason); // Error!
+	(error) => {
+		//animate__backInRight
+		let renderError = document.createElement('div');
+		renderError.classList.add("error");
+		renderError.classList.add("animate__animated");
+		renderError.classList.add("animate__bounceInRight");
+		renderError.innerHTML="что пошло не так!!";
+		let content = document.querySelector('.content');
+		content.appendChild(renderError);
+		console.log(onError()); // Error!
 	},
 );
 let hostName = document.location.origin;

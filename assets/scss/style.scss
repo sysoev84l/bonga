@@ -10,11 +10,13 @@ html,
 body {
     height: 100%;
 }
+
 .signal {
     position: absolute;
     top: 400px;
     right: 50px;
 }
+
 .wrap {
     min-height: 100%;
     display: -webkit-box;
@@ -92,6 +94,20 @@ h2 {
     flex: 1 1 auto;
     margin: 0 auto;
 
+}
+
+.error {
+    width: 180px;
+    background-color: pink;
+    color: #ff0000;
+                -webkit-border-radius: 10px;
+               -moz-border-radius: 10px;
+                    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 10px 15px;
+    margin: 5px;
+    text-align: center;
+    
 }
 
 .box {
